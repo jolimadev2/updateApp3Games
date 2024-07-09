@@ -64,11 +64,13 @@ const NumberGuessingGame = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    width:380,
     alignItems: "center",
     justifyContent: "center",
-    backgroundColor: "#F0F0F0", // Color de fondo de pantalla
+    backgroundColor: "#0c0c0c", // Color de fondo de pantalla
   },
   title: {
+    color:"#f0f0f0",
     fontSize: 20,
     fontWeight: "bold",
     marginBottom: 20,
@@ -77,22 +79,23 @@ const styles = StyleSheet.create({
     marginBottom: 10,
   },
   input: {
-    height: 40,
+    height: 45,
+    color:"#f0f0f0",
     borderColor: "gray",
     borderWidth: 1,
     marginVertical: 10, // Ajuste vertical
     padding: 5,
-    width: 200,
+    width: 250,
     textAlign: "center",
   },
   button: {
-    backgroundColor: "#3498db", // Color del botón
+    backgroundColor: "#13161c",
     justifyContent: "center",
     alignItems: "center",
     borderRadius: 10,
     fontSize: 16,
-    width: 110,
-    height: 40,
+    width: 120,
+    height: 60,
     marginVertical: 10, // Ajuste vertical
   },
   buttonText: {

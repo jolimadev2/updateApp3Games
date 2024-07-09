@@ -14,44 +14,38 @@ const QuizGame = () => {
   // Array de objetos con las preguntas p/el quiz, esto podemos mejorarlo con Firebase y actualizar las preguntas desde ahí.
   const preguntas = [
     {
-      pregunta:
-        "¿Cuál es el siguiente número en la secuencia: 1, 2, 4, 8, 16, ...?",
+      pregunta: "What is the next number in the sequence: 1, 2, 4, 8, 16, ...?",
       opciones: ["32", "64", "256", "512"],
       respuestaCorrecta: 1,
       explicación:
-        "La secuencia es una progresión geométrica, en la que cada número es el doble del anterior. Por lo tanto, el siguiente número es 2 * 16 = 32.",
+        "The sequence is a geometric progression, in which each number is twice the previous one. Therefore, the next number is 2 * 16 = 32.",
     },
     {
-      pregunta: "¿Cuál es el animal que tiene más patas?",
-      opciones: [
-        "El pulpo",
-        "La araña",
-        "La estrella de mar",
-        "La lombriz de tierra",
-      ],
+      pregunta: "Which animal has more legs?",
+      opciones: ["The octopus", "The spider", "The starfish", "The earthworm"],
       respuestaCorrecta: 3,
       explicación:
-        "La estrella de mar tiene hasta 50 patas, lo que la convierte en el animal con más patas.",
+        "The starfish has up to 50 legs, making it the animal with the most legs.",
     },
     {
-      pregunta: "¿Cuál es la capital de Francia?",
-      opciones: ["París", "Roma", "Londres", "Berlín"],
+      pregunta: "What is the capital of France?",
+      opciones: ["París", "Saint Tropez", "Lyon", "Bordeaux"],
       respuestaCorrecta: 1,
-      explicación: "París es la capital de Francia.",
+      explicación: "Paris is the capital of France.",
     },
     {
-      pregunta: "¿Cuál es el resultado de 2 + 2 * 2?",
+      pregunta: "What is the result of 2 + 2 * 2?",
       opciones: ["6", "8", "10", "12"],
       respuestaCorrecta: 2,
       explicación:
-        "El orden de las operaciones matemáticas es: 1. Multiplicación y división 2. Suma y restaPor lo tanto, el resultado es 2 * 2 = 4, luego 4 + 2 = 6.",
+        "The order of the mathematical operations is: 1. Multiplication and division 2. Addition and subtractionTherefore, the result is 2 * 2 = 4, then 4 + 2 = 6.",
     },
     {
-      pregunta: "¿Cuál es la respuesta a la vida, el universo y todo?",
-      opciones: ["42", "La respuesta es 42", "No hay respuesta", "No lo sé"],
+      pregunta: "What is the answer to life, the universe and everything?",
+      opciones: ["32", "The answer is 42", "No answer", "I don't know."],
       respuestaCorrecta: 1,
       explicación:
-        "La respuesta a la vida, el universo y todo es 42, según la novela de Douglas Adams 'La Guía del Autoestopista Galáctico'.",
+        "The answer to life, the universe and everything is 42, according to Douglas Adams' novel 'The Hitchhiker's Guide to the Galactic Hitchhiker'.",
     },
   ];
 
@@ -82,13 +76,13 @@ const QuizGame = () => {
       return (
         <View style={styles.container}>
           <Text style={styles.text}>
-            QUIZ COMPLETADO {`\n`} 🎉¡Gracias por participar!🎉
+            QUIZ FINISHED {`\n`} 🎉¡Thanks to participate!🎉
           </Text>
           <Text style={styles.text}>
-            {`\n`}Puntaje: {score} / {preguntas.length}
+            {`\n`}Score: {score} / {preguntas.length}
           </Text>
           <TouchableOpacity style={styles.opcion} onPress={reiniciarQuiz}>
-            <Text style={styles.text}>Reintentar Quiz</Text>
+            <Text style={styles.text}>Retry Quiz</Text>
           </TouchableOpacity>
         </View>
       );
@@ -120,7 +114,7 @@ const QuizGame = () => {
       const { explicacion } = preguntas[currentQuestion];
       return (
         <View style={styles.containerExplicacion}>
-          <Text style={styles.explicacion}>Explicación:</Text>
+          <Text style={styles.explicacion}>Explanation:</Text>
           <Text style={styles.text}>{explicacion}</Text>
         </View>
       );
@@ -130,7 +124,6 @@ const QuizGame = () => {
 
   return (
     <>
-   
       <View style={styles.container}>
         {renderizarQuiz()}
         {renderizarExplicacion()}
@@ -147,7 +140,7 @@ const QuizGame = () => {
           //   right: 0,
           //   bottom: 0,
           // }}
-        />
+          />
         )}
       </View>
     </>
@@ -156,7 +149,7 @@ const QuizGame = () => {
 
 const styles = StyleSheet.create({
   textTitle: {
-    color: "#ffffff",
+    color: "#f0f0f0",
     fontStyle: "normal",
     fontWeight: "normal",
     fontSize: 18,
@@ -166,11 +159,12 @@ const styles = StyleSheet.create({
   },
   container: {
     padding: 40,
-    backgroundColor: "#F0F0F0",
+    backgroundColor: "black",
+    width: 380,
   },
 
   text: {
-    color: "#fff",
+    color: "#f0f0f0",
     fontSize: 16,
     textAlign: "center",
     marginBottom: 0,
@@ -180,10 +174,10 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     textAlign: "center",
     marginBottom: 10,
-    textDecorationLine: "underline",
+    color: "#f0f0f0",
   },
   opcion: {
-    backgroundColor: "#3498db",
+    backgroundColor: "#13161c",
     padding: 20,
     marginVertical: 15,
     borderRadius: 5,
@@ -192,7 +186,7 @@ const styles = StyleSheet.create({
   containerExplicacion: {
     padding: 20,
     marginBottom: 40,
-    backgroundColor: "#3498db",
+    backgroundColor: "#13161c",
     color: "#fff",
   },
   explicacion: {

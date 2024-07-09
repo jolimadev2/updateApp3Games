@@ -27,7 +27,7 @@ function App() {
         <Stack.Screen
           name="GamesList"
           component={GamesListScreen}
-          options={{ title: "Lista De Juegos",
+          options={{ title: "Games List",
           headerStyle: styles.headerStyle,
           headerTintColor: "#fff",
           headerTitleStyle: styles.headerTitleStyle, }}
@@ -60,7 +60,7 @@ function App() {
 
 const styles = StyleSheet.create({
   headerStyle: {
-    backgroundColor: "#2C3E50", // tono oscuro (Midnight Blue)
+    backgroundColor: "#0ae98a", // tono Platzi
   },
   headerTitleStyle: {
     fontWeight: "bold",

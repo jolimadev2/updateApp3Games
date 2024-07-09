@@ -132,7 +132,7 @@ const MemoGame = () => {
     if (cardsChosen[0] === cardsChosen[1] && cardsChosen[0] !== "") {
       // console.log('¡Encontraste un par!');
 
-      Alert.alert("   \n ¡Encontraste un par!✔️");
+      Alert.alert("   \n ¡Good for you!✅");
       setCardsWon([...cardsWon, cardsChosen[0]]);
 
       setScore(score + 1); // Incrementar el score en 1 al encontrar un par
@@ -146,11 +146,11 @@ const MemoGame = () => {
       // Verificar si  si el juego termino)
       if (cardsWon.length === cardArray.length / 2 - 1) {
         Alert.alert(
-          "         ¡GANASTE!🎁! \n ¿Querés canjear tu premio ahora?"
+          "         ¡You WIN!🎁! \n ¿Would do like to claim your prize now?"
         );
       }
     } else {
-      Alert.alert(" Lo siento Bro, Intenta de nuevo ❌");
+      Alert.alert(" I'm sorry buddy, Try again ❌");
 
       // Voltear las cartas no coincidentes cambiando su atributo "isFlipped"
       const updatedCardArray = [...cardArray];
@@ -206,12 +206,12 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: "center",
     alignItems: "center",
-    backgroundColor: "#F0F0F0",
+    backgroundColor: "#0c0c0c",
     paddingHorizontal: 20,
   },
   scoreText: {
     fontSize: 25,
-    color: "#0c0c0c",
+    color: "#f0f0f0",
     marginBottom: 10,
   },
   scoreValue: {

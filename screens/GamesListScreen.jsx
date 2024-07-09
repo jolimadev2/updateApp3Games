@@ -14,18 +14,18 @@ const GamesListScreen = ({ navigation }) => {
   return (
     <View style={styles.container}>
       <Text style={styles.textTitle}>
-        Empieza por el juego que más te interese:
+        Click any game to start:
       </Text>
       <View style={styles.buttonContainer}>
         <TouchableOpacity
           style={styles.button}
-          onPress={() => handleOnPress("Game1")} // Navega a Game1Screen
+          onPress={() => handleOnPress("Game1")} 
         >
           <Text style={styles.buttonText}>Quiz Game</Text>
         </TouchableOpacity>
         <TouchableOpacity
           style={styles.button}
-          onPress={() => handleOnPress("Game2")} // Navega a Game2Screen
+          onPress={() => handleOnPress("Game2")}
         >
           <Text style={styles.buttonText}>Memo Game</Text>
         </TouchableOpacity>
@@ -43,19 +43,14 @@ const GamesListScreen = ({ navigation }) => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#13161c", // Color de fondo de pantalla
+    backgroundColor: "#13161c", 
     alignItems: "center",
     justifyContent: "center",
   },
   textTitle: {
+    fontSize: 22,
+    fontWeight: "bold",
     color: "#ffffff",
-    fontStyle: "normal",
-    fontWeight: "normal",
-    fontSize: 18,
-    padding: 24,
-    paddingBottom: 10,
-    backgroundColor: "black",
-    textAlign: "center",
   },
   buttonContainer: {
     backgroundColor: "transparent",
