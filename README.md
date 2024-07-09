@@ -1,71 +1,29 @@
-# Aplicación de Juegos de Lógica con React Native 🎮
+<h3>Implementations</h3>
+- Utilized React Native components and elements to build the user interface.
+- Integrated React Navigation for seamless navigation between screens.
+- Applied styling using StyleSheet for a consistent look and feel.
+- Managed assets like images and icons within the application.
+- Implemented various game logics including:
+- Quiz Game: A trivia quiz with multiple questions.
+- Memo Game: A memory matching game.
+- Guess the Number: A number guessing game.
+- Ensured responsiveness and improved user experience with optimized styles.
+- Tested the application on different devices to ensure functionality and performance.
 
-Esta es una aplicación de juegos de lógica desarrollada con React Native. La aplicación incluye juegos como el Quiz Game, Memo Game y Guess the Number.
-
-## Pendientes
-
-- [x] Crear HomeScreen
-- [x] Crear List Games Screen
-- [x] Habilitar botón
-- [x] Revisar Navegación
-- [x] Crear Quiz Game
-- [x] Crear Memo Game
-- [x] Crear Guess the Number
-  - [x] Probar funcionalidad
-  - [x] Estilizar de forma general las pantallas principales.
-- [x ] Probar funcionalidad general
-- [] Mejorar estilos especificos de pantallas internas.
-- [ ] Deploy en PlayStore y AppStore.
-
-## Cómo Usar
-
-1. Clona este repositorio.
-2. Instala las dependencias con `npm install` o `yarn install`.
-3. Ejecuta la aplicación con `npm start` o `yarn start`.
-
-## Contribuir
-
-Si quieres contribuir a este proyecto, por favor, sigue estos pasos:
-
-1. Haz un fork del proyecto.
-2. Crea una nueva rama (`git checkout -b feature/nueva-funcionalidad`).
-3. Realiza tus cambios y haz commit (`git commit -m 'Añadir nueva funcionalidad'`).
-4. Haz push a la rama (`git push origin feature/nueva-funcionalidad`).
-5. Abre un Pull Request.
-
-## Licencia
-
-Este proyecto es de código abierto y está disponible bajo la Licencia MIT. Para más detalles, consulta el archivo [LICENSE]
-
-<br>
-<hr>
-<h3>ENGLISH BELOW:</h3>
-This is a logic games application developed with React Native. The app includes games such as the Quiz Game, Memo Game, and Guess the Number.
-
-Pending Tasks
- Create HomeScreen
- Create List Games Screen
- Enable button
- Review Navigation
- Create Quiz Game
- Create Memo Game
- Create Guess the Number
- Test functionality
- General styling for main screens
- Test general functionality
- Enhance specific styles for internal screens
- Deploy on PlayStore and AppStore.
-How to Use
+#How to Use
 Clone this repository.
 Install dependencies with npm install or yarn install.
 Run the application with npm start or yarn start.
 Contributing
 If you want to contribute to this project, please follow these steps:
 
-Fork the project.
-Create a new branch (git checkout -b feature/new-feature).
-Make your changes and commit (git commit -m 'Add new feature').
-Push the branch (git push origin feature/new-feature).
-Open a Pull Request.
-License
-This project is open-source and available under the MIT License. For more details, see the LICENSE file.
+
+Project Images
+![Collage](https://github.com/jolimadev2/updateApp3Games/assets/173801115/fa7db346-02b3-4648-87a7-2c32ffd99917)
+
+
+![Collage blanco (1)](https://github.com/jolimadev2/updateApp3Games/assets/173801115/1c12d5f6-bb15-4993-bfbc-0acee78ef622)
+
+![Collage fotos polaroid blanco (2)](https://github.com/jolimadev2/updateApp3Games/assets/173801115/14554d2b-0895-40b6-839f-99a7a8b60428)
+
+![Collage fotos (3)](https://github.com/jolimadev2/updateApp3Games/assets/173801115/51b31aca-2c7d-4861-88e3-ec8802feee80)
