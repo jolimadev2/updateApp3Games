@@ -1,3 +1,6 @@
+Logic Games Application with React Native 🎮
+This is a logic games application developed with React Native. The app includes games such as the Quiz Game, Memo Game, and Guess the Number.
+
 <h3>Implementations</h3>
 - Utilized React Native components and elements to build the user interface.
 - Integrated React Navigation for seamless navigation between screens.
