@@ -48,7 +48,7 @@ function App() {
         }} />
         <Stack.Screen name="Game3" component={Game3Screen}
          options={{
-          title: "Guess the Number",
+          title: "Penalty Shooter",
           headerStyle: styles.headerStyle,
           headerTintColor: "#fff",
           headerTitleStyle: styles.headerTitleStyle,

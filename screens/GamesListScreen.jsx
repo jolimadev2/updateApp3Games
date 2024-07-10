@@ -33,7 +33,7 @@ const GamesListScreen = ({ navigation }) => {
           style={styles.button}
           onPress={() => handleOnPress("Game3")}
         >
-          <Text style={styles.buttonText}>Guess the Number</Text>
+          <Text style={styles.buttonText}>Penalty Score</Text>
         </TouchableOpacity>
       </View>
     </View>

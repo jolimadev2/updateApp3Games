@@ -1,11 +1,11 @@
 import React from "react";
 import { View, Text, Pressable, StyleSheet } from "react-native";
-import NumberGuessingGame from "../components/NumberGuessingGame";
+import PenaltyShootoutGame from "../components/PenaltyShootoutGame";
 
 const Game3Screen = ({ navigation }) => {
   return (
     <View style={styles.container}>
-      <NumberGuessingGame />
+      <PenaltyShootoutGame />
       <View style={styles.buttonContainer}>
         <Pressable style={styles.button} onPress={() => navigation.goBack()}>
           <Text style={styles.buttonText}>Back to Game's List</Text>
