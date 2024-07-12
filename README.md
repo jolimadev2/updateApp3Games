@@ -30,3 +30,10 @@ Project Images
 ![Collage fotos polaroid blanco (2)](https://github.com/jolimadev2/updateApp3Games/assets/173801115/14554d2b-0895-40b6-839f-99a7a8b60428)
 
 ![Collage fotos (3)](https://github.com/jolimadev2/updateApp3Games/assets/173801115/51b31aca-2c7d-4861-88e3-ec8802feee80)
+
+<h4>
+- Future implementations, structure the project differently to improve scalability.
+</h4>
+<h4>
+- Implement Firebase to use parameters.
+</h4>

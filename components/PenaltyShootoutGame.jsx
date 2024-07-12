@@ -9,12 +9,22 @@ import {
   Animated,
 } from "react-native";
 
+/**
+ * PenaltyShootoutGame Component
+ * This component renders a penalty shootout game using hooks and React Native elements.
+ * @returns {JSX.Element} PenaltyShootoutGame component
+ */
+
 const PenaltyShootoutGame = () => {
   const [score, setScore] = useState(0);
   const [attempts, setAttempts] = useState(5);
   const [gameOver, setGameOver] = useState(false);
   const [pressAnim] = useState(new Animated.Value(1));
 
+   /**
+   * Handles the shooting logic, determining if the player scores or misses.
+   * @param {number} direction - The direction the player shoots (0: left, 1: center, 2: right)
+   */
   const handleShoot = (direction) => {
     const goalkeeperDirection = Math.floor(Math.random() * 3); // 0: izquierda, 1: centro, 2: derecha
 

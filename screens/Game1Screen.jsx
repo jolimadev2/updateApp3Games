@@ -1,11 +1,16 @@
 import React from "react";
 import { View, Text, Pressable, StyleSheet } from "react-native";
-import QuizGame from "../components/QuizGame";
+import OlympicRaceGame from "../components/OlympicRaceGame";
+
+
+
+
+
 
 const Game1Screen = ({ navigation }) => {
   return (
     <View style={styles.container}>
-      <QuizGame />
+      <OlympicRaceGame />
 
       <View style={styles.buttonContainer}>
         <Pressable

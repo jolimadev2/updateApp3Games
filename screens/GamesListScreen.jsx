@@ -6,6 +6,11 @@ import {
   Text,
 } from "react-native";
 
+
+
+
+
+
 const GamesListScreen = ({ navigation }) => {
   const handleOnPress = (selectedGame) => {
     navigation.navigate(selectedGame); // Navegar a la pantalla seleccionada
@@ -21,7 +26,7 @@ const GamesListScreen = ({ navigation }) => {
           style={styles.button}
           onPress={() => handleOnPress("Game1")} 
         >
-          <Text style={styles.buttonText}>Quiz Game</Text>
+          <Text style={styles.buttonText}>Olympic Race</Text>
         </TouchableOpacity>
         <TouchableOpacity
           style={styles.button}

@@ -34,7 +34,7 @@ function App() {
         />
         <Stack.Screen name="Game1" component={Game1Screen}
         options={{
-          title: "Quiz Game",
+          title: "Olympic Race Game",
           headerStyle: styles.headerStyle,
           headerTintColor: "#fff",
           headerTitleStyle: styles.headerTitleStyle,
@@ -60,7 +60,7 @@ function App() {
 
 const styles = StyleSheet.create({
   headerStyle: {
-    backgroundColor: "#0ae98a", // tono Platzi
+    backgroundColor: "#0ae98a", // Platzi Color
   },
   headerTitleStyle: {
     fontWeight: "bold",

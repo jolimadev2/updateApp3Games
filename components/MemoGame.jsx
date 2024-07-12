@@ -1,109 +1,92 @@
 import React, { useState, useEffect } from "react";
-import {
-  StyleSheet,
-  TouchableOpacity,
-  Image,
-  View,
-  Text,
-  Alert,
-} from "react-native";
-
+import { StyleSheet, TouchableOpacity, Image, View, Text, Alert } from "react-native";
 
 const MemoGame = () => {
-  const [cardsChosen, setCardsChosen] = useState([]); // Para almacenar las cartas solas
-  const [cardsChosenIds, setCardsChosenIds] = useState([]); // Para almacenar los IDs de las cartas seleccionadas
+  const [cardsChosen, setCardsChosen] = useState([]); 
+  const [cardsChosenIds, setCardsChosenIds] = useState([]); 
   const [cardsWon, setCardsWon] = useState([]);
-  //Hook para setear los puntos del juego bro:
   const [score, setScore] = useState(0);
 
-  //Array de Cartas(imagenes del planeta)
   const [cardArray, setCardArray] = useState([
     {
-      name: "sun",
-      img: require("../assets/images/sun.png"),
+      name: "boxing",
+      img: require("../assets/images/boxing.png"), 
       matched: false,
       isFlipped: false,
     },
     {
-      name: "mars",
-      img: require("../assets/images/mars.png"),
+      name: "swimming",
+      img: require("../assets/images/swimming.png"), 
       matched: false,
       isFlipped: false,
     },
     {
-      name: "earth",
-      img: require("../assets/images/earth.png"),
-      matched: false,
-      isFlipped: false,
-    },
-
-    {
-      name: "mars",
-      img: require("../assets/images/mars.png"),
+      name: "javelin",
+      img: require("../assets/images/javelin.png"), 
       matched: false,
       isFlipped: false,
     },
     {
-      name: "sun",
-      img: require("../assets/images/sun.png"),
+      name: "gymnastic",
+      img: require("../assets/images/gymnastic.png"),
       matched: false,
       isFlipped: false,
     },
     {
-      name: "earth",
-      img: require("../assets/images/earth.png"),
+      name: "swimming",
+      img: require("../assets/images/swimming.png"), 
       matched: false,
       isFlipped: false,
     },
     {
-      name: "earth",
-      img: require("../assets/images/earth.png"),
+      name: "gymnastic",
+      img: require("../assets/images/gymnastic.png"), 
       matched: false,
       isFlipped: false,
     },
     {
-      name: "mars",
-      img: require("../assets/images/mars.png"),
-      matched: false,
-      isFlipped: false,
-    },
-
-    {
-      name: "sun",
-      img: require("../assets/images/sun.png"),
+      name: "boxing",
+      img: require("../assets/images/boxing.png"), 
       matched: false,
       isFlipped: false,
     },
     {
-      name: "sun",
-      img: require("../assets/images/sun.png"),
-      matched: false,
-      isFlipped: false,
-    },
-
-    {
-      name: "earth",
-      img: require("../assets/images/earth.png"),
+      name: "javelin",
+      img: require("../assets/images/javelin.png"), 
       matched: false,
       isFlipped: false,
     },
     {
-      name: "mars",
-      img: require("../assets/images/mars.png"),
+      name: "javelin",
+      img: require("../assets/images/javelin.png"), 
+      matched: false,
+      isFlipped: false,
+    },
+    {
+      name: "boxing",
+      img: require("../assets/images/boxing.png"), 
+      matched: false,
+      isFlipped: false,
+    },
+    {
+      name: "gymnastic",
+      img: require("../assets/images/gymnastic.png"), 
+      matched: false,
+      isFlipped: false,
+    },
+    {
+      name: "swimming",
+      img: require("../assets/images/swimming.png"), 
       matched: false,
       isFlipped: false,
     },
   ]);
-  //TUkiii esto es para crear la grilla
+
   const createBoard = () => {
     return cardArray.map((card, index) => (
       <TouchableOpacity key={index} onPress={() => flipCard(index)}>
         <Image
-          source={
-            card.isFlipped
-              ? card.img
-              : require("../assets/images/moon.png")
-          }
+          source={card.isFlipped ? card.img : require("../assets/images/antorcha-olimpica.png")}
           style={{ width: 100, height: 100 }}
         />
       </TouchableOpacity>
@@ -112,72 +95,47 @@ const MemoGame = () => {
 
   const flipCard = (index) => {
     if (cardsChosenIds.length < 2 && !cardArray[index].isFlipped) {
-      // Voltear la carta al cambiar su atributo "isFlipped"
       const updatedCardArray = [...cardArray];
       updatedCardArray[index].isFlipped = true;
-
       setCardsChosen([...cardsChosen, cardArray[index].name]);
       setCardsChosenIds([...cardsChosenIds, index]);
-      console.log("Carta volteada:", cardArray[index].name);
-
-      // Aquí actualizamos el estado del array cardArray con el nuevo valor de isFlipped
       setCardArray(updatedCardArray);
     }
   };
-  //Esta funcion nos sirve para chequear si fue par o no. Riquelme
+
   const checkMatch = () => {
     const optionOneId = cardsChosenIds[0];
     const optionTwoId = cardsChosenIds[1];
 
     if (cardsChosen[0] === cardsChosen[1] && cardsChosen[0] !== "") {
-      // console.log('¡Encontraste un par!');
-
       Alert.alert("   \n ¡Good for you!✅");
       setCardsWon([...cardsWon, cardsChosen[0]]);
-
-      setScore(score + 1); // Incrementar el score en 1 al encontrar un par
-
-      // Reiniciar solo las cartas seleccionadas después de un tiempo para permitir ver el par encontrado
+      setScore(score + 1); 
       setTimeout(() => {
         setCardsChosenIds([]);
         setCardsChosen([]);
       }, 1000);
 
-      // Verificar si  si el juego termino)
       if (cardsWon.length === cardArray.length / 2 - 1) {
-        Alert.alert(
-          "         ¡You WIN!🎁! \n ¿Would do like to claim your prize now?"
-        );
+        Alert.alert("\n ¡You WIN!🎁!");
       }
     } else {
       Alert.alert(" I'm sorry buddy, Try again ❌");
-
-      // Voltear las cartas no coincidentes cambiando su atributo "isFlipped"
       const updatedCardArray = [...cardArray];
       updatedCardArray[optionOneId].isFlipped = false;
       updatedCardArray[optionTwoId].isFlipped = false;
-
-      // Actualizamos el estado del array cardArray para reflejar el cambio en las imágenes
       setCardArray(updatedCardArray);
-
-      // Reiniciar las cartas seleccionadas después de un tiempo para permitir ver la segunda carta volteada
       setTimeout(() => {
         setCardsChosenIds([]);
         setCardsChosen([]);
       }, 1000);
     }
   };
-  //funcion p/intentos disponibles
-  const lifesAvailable = () => {
-    //ver si colocar vidas disponibles == intentos disponibles
-  };
 
-  //Ver si se puede optimizar esto:
   useEffect(() => {
     if (cardsChosenIds.length === 2) {
       checkMatch();
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [cardsChosenIds]);
 
   return (
@@ -208,6 +166,8 @@ const styles = StyleSheet.create({
     alignItems: "center",
     backgroundColor: "#0c0c0c",
     paddingHorizontal: 20,
+    width: 420,
+    height: 420,
   },
   scoreText: {
     fontSize: 25,
