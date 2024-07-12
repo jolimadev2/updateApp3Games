@@ -3,7 +3,6 @@ import { View, Text, TouchableOpacity, StyleSheet, ImageBackground, Animated, Ea
 
 
 /**
- * OlympicRaceGame Component
  * 
  * This component renders a mini runner game where the player can control a runner
  * that moves across the screen. The game uses React Native Animated and timing to 

@@ -1,6 +1,16 @@
 import React, { useState, useEffect } from "react";
 import { StyleSheet, TouchableOpacity, Image, View, Text, Alert } from "react-native";
 
+
+
+
+
+/**
+ * This component render a memo game using an Array to storage the images to use for the cards
+ * implementing a function i can flip the card to find the pairs and check if the cards match or not.
+ * 
+ * @returns {JSX.Element} The rendered the MemoGame component.
+ */
 const MemoGame = () => {
   const [cardsChosen, setCardsChosen] = useState([]); 
   const [cardsChosenIds, setCardsChosenIds] = useState([]); 
