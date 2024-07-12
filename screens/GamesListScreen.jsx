@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import {
   StyleSheet,
   TouchableOpacity,
@@ -13,7 +13,7 @@ import {
 
 const GamesListScreen = ({ navigation }) => {
   const handleOnPress = (selectedGame) => {
-    navigation.navigate(selectedGame); // Navegar a la pantalla seleccionada
+    navigation.navigate(selectedGame);
   };
 
   return (

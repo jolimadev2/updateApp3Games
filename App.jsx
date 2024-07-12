@@ -7,6 +7,11 @@ import GamesListScreen from "./screens/GamesListScreen";
 import Game1Screen from "./screens/Game1Screen";
 import Game2Screen from "./screens/Game2Screen";
 import Game3Screen from "./screens/Game3Screen";
+import LogInScreen from "./screens/LogInScreen";
+
+
+
+
 
 const Stack = createNativeStackNavigator();
 
@@ -14,6 +19,16 @@ function App() {
   return (
     <NavigationContainer>
       <Stack.Navigator>
+      <Stack.Screen
+          name="Login"
+          component={LogInScreen}
+          options={{
+            title: "Login",
+            headerStyle: styles.headerStyle,
+            headerTintColor: "#fff",
+            headerTitleStyle: styles.headerTitleStyle,
+          }}
+        />
         <Stack.Screen
           name="Home"
           component={HomeScreen}

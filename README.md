@@ -32,8 +32,8 @@ Project Images
 ![Collage fotos (3)](https://github.com/jolimadev2/updateApp3Games/assets/173801115/51b31aca-2c7d-4861-88e3-ec8802feee80)
 
 <h4>
-- Future implementations, structure the project differently to improve scalability.
+- Implementation of Log in for users and send newLetter
 </h4>
 <h4>
-- Implement Firebase to use parameters.
+- Implement Firebase to use parameters and change palette colors.
 </h4>
