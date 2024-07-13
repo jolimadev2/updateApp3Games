@@ -1,14 +1,46 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   Text,
   StyleSheet,
   View,
   TextInput,
   TouchableOpacity,
-  Image
+  Image,
+  Alert
 } from "react-native";
+import appFirebase from '../credentials';
+import { getAuth,signInWithEmailAndPassword } from "firebase/auth";
 
-const LogInScreen = ({navigation}) => {
+
+
+
+const auth = getAuth(appFirebase)
+/**
+ * 
+ * Function that handles the login,
+ * @returns when the user is authenticated by logging in correctly 
+ * he/she can navigate to the Home screen.
+ */
+const LogInScreen = (props) => {
+
+
+  const [email, setEmail] = useState()
+  const [password, setPassword] = useState()
+
+  const login = async() => {
+    try {
+      await signInWithEmailAndPassword(auth,email,password)
+      Alert.alert('logging in...', 'entering')
+      props.navigation.navigate('Home')  //when i logg succesfully
+  
+    } catch (error) {
+      console.log('error: ',error)
+      Alert.alert('The User or Password is incorrect')
+
+    }
+  }
+
+
   return (
     <View style={styles.container}>
       <View>
@@ -23,23 +55,22 @@ const LogInScreen = ({navigation}) => {
           <TextInput
             placeholder="example@mail.com"
             style={{ paddingHorizontal: 15 }}
+            onChangeText={(text) => setEmail(text)}
           />
         </View>
 
         <View style={styles.cardPlaceholder}>
-          <TextInput placeholder="Password" style={{ paddingHorizontal: 15 }} />
+          <TextInput placeholder="Password" style={{ paddingHorizontal: 15 }} 
+          onChangeText={(text) => setPassword(text)} secureTextEntry={true}
+          />
         </View>
 
         <View style={styles.buttonContainer}>
-          <TouchableOpacity style={styles.loginButton}>
-            <Text>Sign In</Text>
+          <TouchableOpacity style={styles.loginButton} onPress={login}>
+            <Text style={styles.btnText}>Sign In</Text>
           </TouchableOpacity>
         </View>
-        <View style={styles.buttonContainer}>
-        <TouchableOpacity style={styles.button} onPress={() => navigation.navigate("Home")}>
-          <Text style={styles.text}>Play to Start</Text>
-        </TouchableOpacity>
-      </View>
+
       </View>
     </View>
   );
@@ -60,7 +91,7 @@ const styles = StyleSheet.create({
   },
   card: {
     margin: 20,
-    backgroundColor: "white", //maybe change it later
+    backgroundColor: "#f0f0f0", //maybe change it later
     borderRadius: 20,
     width: "90%",
     padding: 20,
@@ -75,7 +106,7 @@ const styles = StyleSheet.create({
   },
   cardPlaceholder:{
     paddingVertical: 20,
-    backgroundColor:'#f0f0f0', //change it later
+    backgroundColor:'#ccc', //change it later
     borderRadius:30,
     marginVertical: 10,
   },
@@ -95,5 +126,9 @@ const styles = StyleSheet.create({
     width: 150,
     height: 50,
   },
+  btnText:{
+    textAlign:'center',
+    color:'white'
+  }
 });
 export default LogInScreen;
