@@ -22,6 +22,14 @@ If you want to contribute to this project, please follow these steps:
 
 
 Project Images
+
+# LAST UPDATE LOGIN WITH FIREBASE AUTHENTICATION:
+
+![games-app](https://github.com/user-attachments/assets/2cd85395-dea8-40a8-94de-9c2b62ebec65)
+
+
+----------------------------------------------
+
 ![Collage](https://github.com/jolimadev2/updateApp3Games/assets/173801115/fa7db346-02b3-4648-87a7-2c32ffd99917)
 
 
